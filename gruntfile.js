@@ -44,17 +44,29 @@ module.exports = function(grunt) {
 				}]
 			}, // close .build
 		}, // close cssmin
-		less: {
+
+		sass: {
+			options: {
+				sourceMap: false
+			},
 			build: {
-				files: [{
-					cwd: 'src/less',
-					expand: true,
-					src: ['*.less'],
-					dest: 'src/css/',
-					ext: '.css'
-				}]
-			}, // close .build
-		}, // close less
+				files : {
+					'src/css/off-canvas-nav.css':'src/sass/off-canvas-nav.scss'
+				}
+			}
+		},
+
+		// less: {
+		// 	build: {
+		// 		files: [{
+		// 			cwd: 'src/less',
+		// 			expand: true,
+		// 			src: ['*.less'],
+		// 			dest: 'src/css/',
+		// 			ext: '.css'
+		// 		}]
+		// 	}, // close .build
+		// }, // close less
 		watch: {
 			js: {
 				files: 'src/js/*.js',
@@ -64,8 +76,8 @@ module.exports = function(grunt) {
 				},
 			},
 			css: {
-				files: 'src/less/*.less',
-				tasks: ['less','cssmin','usebanner:css'],
+				files: 'src/sass/*.scss',
+				tasks: ['sass','cssmin','usebanner:css'],
 				options: {
 					interrupt: true,
 				},
@@ -80,7 +92,7 @@ module.exports = function(grunt) {
 	        linebreak: true
 	      },
 	      files: {
-	        src: ['dist/css/offcanvas-nav.min.css']
+	        src: ['dist/css/off-canvas-nav.min.css']
 	      }
 	    },
 			js: {
@@ -90,7 +102,7 @@ module.exports = function(grunt) {
 	        linebreak: true
 	      },
 	      files: {
-	        src: ['dist/js/offcanvas-nav.min.js']
+	        src: ['dist/js/off-canvas-nav.min.js']
 	      }
 	    }
 	  },
@@ -117,14 +129,14 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-banner');
 	grunt.loadNpmTasks('grunt-bump');
 
 	// Default task(s).
 	grunt.registerTask('default', ['build', 'watch']);
-	grunt.registerTask('build', ['clean', 'uglify','less','csslint','cssmin','usebanner']);
+	grunt.registerTask('build', ['clean', 'uglify','sass','csslint','cssmin','usebanner']);
 };

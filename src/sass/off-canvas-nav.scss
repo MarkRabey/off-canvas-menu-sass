@@ -1,0 +1,90 @@
+@import "bower_components/sass-burger/_burger.scss";
+
+$menu-background-color: #2d2f33;
+$menu-text-color: #fff;
+$menu-width: 250px;
+
+@mixin translateX($x) {
+	-o-transform: translateX($x);
+	-moz-transform: translateX($x);
+	-ms-transform: translateX($x);
+	-webkit-transform: translateX($x);
+	transform: translateX($x);
+}
+
+@mixin transition-transform() {
+	-o-transition: -o-transform ease-in 0.2s;
+	-moz-transition: -moz-transform ease-in 0.2s;
+	-ms-transition: -moz-transform ease-in 0.2s;
+	-webkit-transition: -webkit-transform ease-in 0.2s;
+	transition: transform ease-in 0.2s;
+}
+
+html,body {
+	margin: 0;
+}
+
+.off-canvas-nav {
+	background-color: $menu-background-color;
+	display: block;
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+	font-size: 15px;
+	top: 0;
+	width: $menu-width;
+	z-index: 2000;
+
+	@include translateX(-$menu-width);
+
+	@include transition-transform();
+
+}
+
+	.off-canvas-nav--expanded {
+		@include translateX(0);
+	}
+
+.off-canvas-nav__list {
+	padding: 0;
+}
+
+.off-canvas-nav__item {
+	list-style-type: none;
+	padding-left:5px;
+
+	&:hover {
+		background-color: lighten($menu-background-color,30%);
+	}
+}
+
+.off-canvas-nav__link {
+	display: block;
+	color: $menu-text-color;
+	text-decoration: none;
+	padding: 10px 0;
+}
+
+.off-canvas-nav__toggle {
+	display: inline-block;
+	padding: .5em;
+	background-color: $menu-background-color;
+	position: fixed;
+	top: 0;
+
+	@include transition-transform();
+}
+
+.off-canvas-nav__toggle-icon {
+	@include burger(25px, 3px, 5px, $menu-text-color);
+
+
+}
+
+.off-canvas-nav__toggle--expanded {
+	.off-canvas-nav__toggle-icon {
+		@include burger-to-cross;
+	}
+
+	@include translateX($menu-width);
+}

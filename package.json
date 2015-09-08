@@ -1,14 +1,14 @@
 {
-  "name": "offcanvas-menu",
-  "version": "0.1.6",
-  "description": "Off-canvas Menu ",
+  "name": "off-canvas-menu-sass",
+  "version": "0.0.1",
+  "description": "Off-canvas menu built with Sass",
   "main": "gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarkRabey/offcanvas-menu"
+    "url": "https://github.com/MarkRabey/off-canvas-menu-sass"
   },
   "bugs": {
-    "url": "https://github.com/MarkRabey/offcanvas-menu/issues"
+    "url": "https://github.com/MarkRabey/off-canvas-menu-sass/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,9 +22,9 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-csslint": "^0.4.0",
     "grunt-contrib-cssmin": "^0.12.3",
-    "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.0.0",
     "watch": "^0.16.0"
   }
 }

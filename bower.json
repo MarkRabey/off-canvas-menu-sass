@@ -1,22 +1,22 @@
 {
-  "name": "offcanvas-menu",
-  "version": "0.1.6",
-  "homepage": "https://github.com/MarkRabey/offcanvas-menu",
+  "name": "off-canvas-menu-sass",
+  "version": "0.0.1",
+  "homepage": "https://github.com/MarkRabey/off-canvas-menu-sass",
   "authors": [
     "Mark Rabey <mark@markrabey.com>"
   ],
-  "description": "A simple off-canvas navigation",
+  "description": "A simple off-canvas navigation built with Sass",
   "keywords": [
     "menu",
     "navigation",
     "off-canvas",
     "javascript",
     "css",
-    "less"
+    "sass"
   ],
   "main": [
-    "dist/includes/js/offcanvas-menu.min.js",
-    "dist/includes/css/offcanvas-menu.min.css"
+    "dist/includes/js/off-canvas-menu.min.js",
+    "dist/includes/css/off-canvas-menu.min.css"
   ],
   "license": "MIT",
   "ignore": [
@@ -27,6 +27,6 @@
     "tests"
   ],
   "dependencies": {
-    "less-burger": "~0.1.0"
+    "sass-burger": "~1.2.1"
   }
 }

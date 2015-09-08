@@ -1,26 +1,28 @@
 Off Canvas Menu
 ==============
-[![Gitter chat](https://badges.gitter.im/MarkRabey/offcanvas-menu.png)](https://gitter.im/MarkRabey/offcanvas-menu "Gitter chat")
+[![Gitter chat](https://badges.gitter.im/MarkRabey/off-canvas-menu-sass.png)](https://gitter.im/MarkRabey/off-canvas-menu-sass "Gitter chat")
 
-[![devDependencies](https://david-dm.org/MarkRabey/offcanvas-menu/dev-status.svg)](https://david-dm.org/MarkRabey/offcanvas-menu#info=devDependencies&view=table) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Issues](http://img.shields.io/github/issues/MarkRabey/offcanvas-menu.svg)]( https://github.com/MarkRabey/offcanvas-menu/issues )
+[![devDependencies](https://david-dm.org/MarkRabey/off-canvas-menu-sass/dev-status.svg)](https://david-dm.org/MarkRabey/off-canvas-menu-sass#info=devDependencies&view=table) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Issues](http://img.shields.io/github/issues/MarkRabey/off-canvas-menu-sass.svg)]( https://github.com/MarkRabey/off-canvas-menu-sass/issues )
 ___
 
-Check [here](http://markrabey.github.io/offcanvas-menu/) for a demo.
-Uses [Less Burger](https://github.com/MarkRabey/less-burger) icon.
+A simple off-canvas menu. This is the same functionality as [this one](https://github.com/MarkRabey/offcanvas-menu), except built with Sass instead of Less.
+
+Check [here](http://markrabey.github.io/off-canvas-menu-sass/) for a demo.
+Uses Sass Burger](https://github.com/jorenvanhee/sass-burger) icon.
 
 ## Installation
 ### Bower
 
-	bower install offcanvas-menu --save
+	bower install off-canvas-menu-sass --save
 
 ### NPM
 
-	npm install offcanvas-menu --save
+	npm install off-canvas-menu-sass --save
 
 After Bower or NPM install, copy the files from `dist/css` and `dist/js` to your project's assets folder.
 
 ### Without a Package Manager
-Clone repo, or download [zip](https://github.com/MarkRabey/offcanvas-menu/archive/master.zip).
+Clone repo, or download [zip](https://github.com/MarkRabey/off-canvas-menu-sass/archive/master.zip).
 
 ## Usage
 A working sample is available in the download, in the 'dist' folder.
@@ -32,33 +34,33 @@ Here is the expected HTML structure:
 ...
 <head>
 	...
-	<link rel="stylesheet" href="path/to/css/offcanvas-nav.min.css">
+	<link rel="stylesheet" href="path/to/css/off-canvas-nav.min.css">
 </head>
 
-<nav class="offcanvas-nav">
-	<ul class="offcanvas-nav__list">
-		<li class="offcanvas-nav__item">
-			<a href="#" class="offcanvas-nav__link">Item 1</a>
+<nav class="off-canvas-nav">
+	<ul class="off-canvas-nav__list">
+		<li class="off-canvas-nav__item">
+			<a href="#" class="off-canvas-nav__link">Item 1</a>
 		</li>
-		<li class="offcanvas-nav__item">
-			<a href="#" class="offcanvas-nav__link">Item 2</a>
+		<li class="off-canvas-nav__item">
+			<a href="#" class="off-canvas-nav__link">Item 2</a>
 		</li>
-		<li class="offcanvas-nav__item">
-			<a href="#" class="offcanvas-nav__link">Item 3</a>
+		<li class="off-canvas-nav__item">
+			<a href="#" class="off-canvas-nav__link">Item 3</a>
 		</li>
-		<li class="offcanvas-nav__item">
-			<a href="#" class="offcanvas-nav__link">Item 4</a>
+		<li class="off-canvas-nav__item">
+			<a href="#" class="off-canvas-nav__link">Item 4</a>
 		</li>
-		<li class="offcanvas-nav__item">
-			<a href="#" class="offcanvas-nav__link">Item 5</a>
+		<li class="off-canvas-nav__item">
+			<a href="#" class="off-canvas-nav__link">Item 5</a>
 		</li>
 	</ul>
 </nav>
 
-<a id="nav-toggle" href="#" class="offcanvas-nav__toggle">Menu</a>
+<a id="nav-toggle" href="#" class="off-canvas-nav__toggle">Menu</a>
 ...
 
-	<script src="path/to/js/offcanvas-nav.min.js"></script>
+	<script src="path/to/js/off-canvas-nav.min.js"></script>
 </body>
 ```
 
